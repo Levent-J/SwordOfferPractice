@@ -52,4 +52,27 @@ public class SortExercise {
             System.out.print("["+num+"]");
         }
     }
+    //快速排序
+    public void quick(int[] nums,int start,int end){
+        int key = nums[start];
+        int i=start;
+        int j=end;
+        while (i<j){
+            while (nums[j]>key&&j>i){
+                j--;
+            }
+            nums[i] = nums[j];
+            while (nums[i]<key&&j>i){
+                i++;
+            }
+            nums[j] = key;
+        }
+
+        if (i-1>start){
+            quick(nums,start,i-1);
+        }
+        if (i+1<end){
+            quick(nums,i+1,end);
+        }
+    }
 }
