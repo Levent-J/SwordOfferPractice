@@ -20,5 +20,36 @@ public class SortExercise {
         for (int num : nums) {
             System.out.print("["+num+"]");
         }
+
+    }
+    //冒泡排序
+    public void bubble(int[] nums){
+        if (nums.length<2){
+            return;
+        }
+        int p = 0;
+        int k = nums.length-1;
+        boolean sorted = true;
+        for (int i=0;i<nums.length-1;i++){
+            for (int j=0;j<k;j++){
+                if (nums[j]>nums[j+1]){
+                    sorted = false;
+                    int temp = nums[j];
+                    nums[j] = nums[j+1];
+                    nums[j+1] = temp;
+                    p = j+1;
+                }
+            }
+            k=p;
+            if (sorted){
+                break;
+            }else {
+                sorted = true;
+            }
+        }
+
+        for (int num : nums) {
+            System.out.print("["+num+"]");
+        }
     }
 }

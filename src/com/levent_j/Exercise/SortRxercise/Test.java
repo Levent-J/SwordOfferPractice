@@ -12,7 +12,7 @@ public class Test {
     }
 
     private static void testSort(int[] nums) {
-        new SortExercise().insertDirect(nums);
+        new SortExercise().bubble(nums);
         System.out.println();
     }
 }
