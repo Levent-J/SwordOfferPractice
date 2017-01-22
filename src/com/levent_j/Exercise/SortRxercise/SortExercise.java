@@ -5,7 +5,7 @@ package com.levent_j.Exercise.SortRxercise;
  */
 public class SortExercise {
     //直接插入
-    public void insertDirect(int[] nums){
+    public void insertDirectSort(int[] nums){
         if (nums.length<2){
             return;
         }
@@ -23,7 +23,7 @@ public class SortExercise {
 
     }
     //冒泡排序
-    public void bubble(int[] nums){
+    public void bubbleSort(int[] nums){
         if (nums.length<2){
             return;
         }
@@ -53,7 +53,7 @@ public class SortExercise {
         }
     }
     //快速排序
-    public void quick(int[] nums,int start,int end){
+    public void quickSort(int[] nums, int start, int end){
         int key = nums[start];
         int i=start;
         int j=end;
@@ -69,14 +69,14 @@ public class SortExercise {
         }
 
         if (i-1>start){
-            quick(nums,start,i-1);
+            quickSort(nums,start,i-1);
         }
         if (i+1<end){
-            quick(nums,i+1,end);
+            quickSort(nums,i+1,end);
         }
     }
     //选择排序
-    public void select(int[] nums){
+    public void selectSort(int[] nums){
         if (nums.length<2){
             return;
         }
@@ -91,6 +91,38 @@ public class SortExercise {
             int temp = nums[minIndex];
             nums[minIndex] = nums[i];
             nums[i] = temp;
+        }
+    }
+    //二路归并排序
+    public void mergeSort(int[] nums){
+        mergeSort(nums,0,nums.length-1);
+    }
+
+    private void mergeSort(int[] nums, int left, int right) {
+        if (left>=right){
+            return;
+        }
+        int mid = (left+right)/2;
+        mergeSort(nums,left,mid);
+        mergeSort(nums,mid+1,right);
+        merge(nums,left,mid,right);
+    }
+
+    private void merge(int[] nums, int left, int mid, int right) {
+        int[] tmp = new int[nums.length];
+        int r2 = mid+1;
+        int l2 = left;
+        int s2 = left;
+        int index = left;
+        while (l2<=mid&&r2<=right){
+            if (nums[l2]<nums[r2]){
+                tmp[index++] = nums[l2++];
+            }else {
+                tmp[index++] = nums[r2++];
+            }
+        }
+        while (s2<=right){
+            nums[s2++] = tmp[s2++];
         }
     }
 }

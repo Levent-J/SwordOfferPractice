@@ -12,7 +12,7 @@ public class Test {
     }
 
     private static void testSort(int[] nums) {
-        new SortExercise().select(nums);
+        new SortExercise().selectSort(nums);
         for (int num : nums) {
             System.out.print("["+num+"]");
         }
