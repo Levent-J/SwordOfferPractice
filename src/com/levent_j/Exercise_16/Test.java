@@ -1,4 +1,5 @@
-package com.levent_j.Exercise_15;
+package com.levent_j.Exercise_16;
+
 
 
 /**
@@ -12,15 +13,11 @@ public class Test {
         head.next.next.next = new ListNode(4);
         head.next.next.next.next = new ListNode(5);
         head.next.next.next.next.next = new ListNode(6);
-
-        print(head);
-        System.out.println();
-        try {
-            System.out.print("倒数第"+1+"个是"+
-                    new Exercise_15().findLastKthNode(head,-1).value);
-        }catch (NullPointerException e){
-            System.out.print("没了");
-        }
+        ListNode node1 = new ListNode(1);
+        ListNode node2 = new ListNode(2);
+        node1.next = node2;
+       print(node1);
+       print(new Exercise_16().reverseList(null));
     }
     public static void print(ListNode head){
         ListNode ptr = head;
