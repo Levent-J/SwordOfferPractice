@@ -21,6 +21,7 @@ public class Test {
         print(head1);
         print(head2);
         print(new Exercie_17().merge(head1,head2));
+
     }
     public static void print(ListNode head){
         ListNode ptr = head;
