@@ -12,7 +12,6 @@ public class Test {
                 {16,17,18,19,20},
                 {21,22,23,24,25},
         };
-//        new Solution().PrintMatrix(matrix);
         print(matrix);
         System.out.println();
         new Solution().PrintMatrix(matrix);
