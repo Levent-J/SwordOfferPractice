@@ -8,7 +8,7 @@ public class Test {
         TreeNode root = new TreeNode(10);
         root.left = new TreeNode(5);
         root.right = new TreeNode(12);
-        
+
         root.left.right = new TreeNode(7);
 
         new Solution().FindPath(root,15);
