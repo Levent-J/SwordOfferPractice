@@ -10,5 +10,9 @@ public class Test {
         for (int num : nums) {
             System.out.print(" "+num);
         }
+
+        System.out.println();
+        String s = "12345";
+        System.out.print(s.substring(s.length()-1));
     }
 }
