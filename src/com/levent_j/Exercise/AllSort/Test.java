@@ -5,9 +5,14 @@ package com.levent_j.Exercise.AllSort;
  */
 public class Test {
     public static void main(String[] args){
-        int[] nums = new int[]{2,4,3,7,5,8,9,6};
+        int[] nums = new int[]{2,4,1,3,7,5,8,9,6};
         printNums(nums);
+        System.out.println("直接插入：");
+        printNums(new Insert().DirectInsert(nums));
+        System.out.println("希尔排序：");
         printNums(new Insert().ShellSort(nums));
+        System.out.println("直接选择：：");
+        printNums(new Select().DirectSelect(nums));
     }
 
     public static void printNums(int[] nums){
