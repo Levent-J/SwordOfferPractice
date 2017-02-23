@@ -11,8 +11,12 @@ public class Test {
         printNums(new Insert().DirectInsert(nums));
         System.out.println("希尔排序：");
         printNums(new Insert().ShellSort(nums));
-        System.out.println("直接选择：：");
+        System.out.println("直接选择：");
         printNums(new Select().DirectSelect(nums));
+        System.out.println("冒泡排序：");
+        printNums(new Swap().BubbleSort(nums));
+        System.out.println("快速排序：");
+        printNums(new Swap().QuickSort(nums));
     }
 
     public static void printNums(int[] nums){
